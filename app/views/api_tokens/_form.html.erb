@@ -1,0 +1,32 @@
+<%= form_with(model: api_token) do |form| %>
+  <% if api_token.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(api_token.errors.count, "error") %> prohibited this api_token from being saved:</h2>
+
+      <ul>
+        <% api_token.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :token, style: "display: block" %>
+    <%= form.text_area :token %>
+  </div>
+
+  <div>
+    <%= form.label :active, style: "display: block" %>
+    <%= form.check_box :active %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
