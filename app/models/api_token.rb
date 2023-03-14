@@ -4,6 +4,8 @@ class ApiToken < ApplicationRecord
 
   before_validation :generate_token, on: :create
 
+  encrypts :token, deterministic: true
+
   private
 
   def generate_token
