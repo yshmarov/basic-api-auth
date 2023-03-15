@@ -1,24 +1,14 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Example GET requests:
 
-Things you may want to cover:
+```shell
+curl -X GET "http://localhost:3000/api/v1/posts/1" -H "Authorization: Bearer 16754856f1494104f8ac497663698002"
+```
 
-* Ruby version
+```shell
+curl -X GET "http://localhost:3000/api/v1/posts" -H "Authorization: Bearer 16754856f1494104f8ac497663698002"
+```
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Resources used:
+* https://guides.rubyonrails.org/active_record_encryption.html
+* https://stevepolito.design/blog/build-an-api-in-rails-with-authentication
